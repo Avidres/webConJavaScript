@@ -1,0 +1,10 @@
+<div class="centrar">
+<h1>Sus Datos son: <%- req.session.user.usuario %>  </h1>
+
+<h2>Foto</h2>
+<img src="images/<%- req.session.user.url %>" height="100px" width="100px">
+<form action="Usuarios/subirFoto" enctype="multipart/form-data" method="post">
+    <input type="file" name="perfil" class="alinearBoton">
+    <input type="submit" value="Submit">
+</form>
+</div>

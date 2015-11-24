@@ -1,0 +1,24 @@
+<div class="jumbotron alinear">
+  <h1 class="centrar">Bienvenidos</h1>
+
+  <div class="centrar">
+    <img src='images/pokemon.jpg' height="300px" width="300px">
+  </div>
+  <h2 class="alinearInterno">Lista de Usuarios</h2>
+
+  <div class="alinearInterno">
+    <ul>
+      <% for(var i = 0; i < usuarios.length; i++) { %>
+      <li class="alinearInterno" style="font-size: 30px"
+      >
+        <%= usuarios[i].nombre %></li>
+        <ul style="padding-right: 10%"> <% for(var j = 0; j < usuarios[i].pokemons.length; j++) { %>
+        <pre><li><%= usuarios[i].pokemons[j].nombre %><br><img src="images/<%=usuarios[i].pokemons[j].url %>" height="80px" width="80px"></li></pre>
+        <% } %>
+        </ul>
+      <% } %>
+    </ul>
+  </div>
+
+  <p class="alinearInterno"><a href="/login" class="btn btn-primary btn-lg">Inicio</a></p>
+</div>
